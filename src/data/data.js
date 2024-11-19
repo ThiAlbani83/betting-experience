@@ -1,0 +1,52 @@
+export const cargo = [
+  "Afiliado",
+  "Affiliate Manager",
+  "Influenciador",
+  "Streamer",
+  "Founder | Co-founder",
+  "CEO",
+  "COO",
+  "CTO",
+  "CFO",
+  "CMO",
+  "CBDO",
+  "CCO (Chief Compliance Officer)",
+  "CPO (Chief Product Officer)",
+  "CLO (Chief Legal Officer)",
+  "CSO (Chief Security Officer)",
+  "CHRO (Chief Human Resources Officer)",
+  "CDO (Chief Data Officer)",
+  "Desenvolvedor de Jogos",
+  "Designer",
+  "Engenheiro de Software",
+  "Gerente de Mídias Sociais",
+  "Executivo de Vendas",
+  "Operações e Suporte",
+  "Atendimento ao Cliente",
+  "Gerente de Operações",
+  "Especialista em Pagamentos",
+  "Analista de Dados",
+  "Compliance",
+  "Advogado",
+  "Analista de Prevenção à Lavagem de Dinheiro (AML)",
+  "Contador",
+  "Analista Financeiro",
+  "Recursos Humanos",
+  "Recrutador",
+  "Gerente de Recursos Humanos",
+  "Segurança e TI",
+  "Especialista em Segurança da Informação",
+];
+
+export const segmento = [
+  "Operador",
+  "Software Provider",
+  "Rede de Afiliados",
+  "Regulação",
+  "Governo",
+  "Jurídico/LGPD",
+];
+
+const data = { cargo, segmento };
+
+export default { data };

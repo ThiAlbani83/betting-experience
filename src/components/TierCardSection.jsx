@@ -2,10 +2,11 @@ import TiersCards from "./TiersCards";
 import tierSilver from "../assets/copas.png";
 import tierGold from "../assets/star.png";
 import tierPlatinum from "../assets/cloud.png";
+import star from "../assets/star-decoration.png";
 
 const TierCardSection = () => {
   return (
-    <div className="flex w-full max-w-fit mx-auto px-10 gap-10 justify-center flex-wrap">
+    <div className="flex flex-wrap justify-center w-full gap-10 px-10 mx-auto max-w-fit">
       <TiersCards
         title="Faixa Silver"
         description="Menção e logotipo em materiais de divulgação digital e certificado de participação."
@@ -20,6 +21,13 @@ const TierCardSection = () => {
         title="Faixa Platinum"
         description="Patrocinador master com exclusividade de marca, ativações ao vivo e dados gerais de contato de participantes interessados."
         image={tierPlatinum}
+        decoration={
+          <img
+            src={star}
+            alt="star"
+            className="absolute top-[340px] right-[40px] max-w-[315px] w-full opacity-30"
+          />
+        }
       />
     </div>
   );

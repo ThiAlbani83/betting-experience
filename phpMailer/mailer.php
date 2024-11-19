@@ -54,8 +54,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->isHTML(true);
 
-        $mail->Subject = 'Nova mensagem de ' . $data['name'];
-        $mail->Body    = 'Cliente: ' . $data['name'] . '<br>' . 'Telefone: ' . $data['phone'] . '<br>' . 'Email: ' . $data['email'] . '<br><br>' . 'Mensagem: ' . nl2br($data['message']);
+        $mail->Subject = 'Usuário Cadastrado ' . $data['name'];
+        $mail->Body    = 'Cliente: ' . $data['name'] . '<br>' . 'Telefone: ' . $data['phone'] . '<br>' . 'Email: ' . $data['email'] . '<br>' . 'Cargo: ' . nl2br($data['cargo']) . '<br>' . 'Segmento: ' . nl2br($data['segmento']);
 
         $mail->send();
 
@@ -64,8 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom('tropicalize.br@gmail.com', 'Equipe Tropicalize.co');
         $mail->addAddress($data['email']);
 
-        $mail->Subject = 'Recebemos sua mensagem - Tropicalize.co';
-        $mail->Body = 'Olá ' . $data['name'] . ', recebemos sua mensagem.<br/> Em breve nossa equipe entrará em contato.<br/><br/> Atenciosamente,<br/> Equipe Tropicalize.co';
+        $mail->Subject = 'Inscrição Confirmada';
+        $mail->Body = 'Olá ' . $data['name'] . ', recebemos sua inscrição para o Betting Experience.<br/> Fique ligado para mais informações sobre o evento nos próximos dias. <br/><br/> Atenciosamente,<br/> Equipes Tropicalize & BetPass';
 
         $mail->send();
 
