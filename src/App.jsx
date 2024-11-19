@@ -16,7 +16,7 @@ function App() {
       <section className="bg-background-dark px-10 pt-20">
         <Carroussel />
       </section>
-      <section className="w-full bg-[url('./bg-gradient-blue.png')] bg-cover bg-no-repeat bg-center mt-40 py-24">
+      <section className="w-full bg-[url('/bg-gradient-blue.png')] bg-cover bg-no-repeat bg-center mt-40 py-24">
        <Patrocine />
       </section>
       <Footer />
