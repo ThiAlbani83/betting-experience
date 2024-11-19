@@ -1,14 +1,20 @@
 import tropicalize from "../assets/tropicalize.svg";
 import betpass from "../assets/betpass.svg";
+import { motion } from "framer-motion";
 
 const HeroLeft = () => {
   return (
-    <div className="flex w-full flex-col gap-8 font-roboto py-10 px-10 2xl:px-0 mx:pr-10 items-center lg:items-start">
-      <span className="text-base text-primary-dark max-w-fit text-center sm:text-left">
+    <motion.div
+      initial={{ x: -150 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1 }}
+      className="flex flex-col items-center w-full gap-8 px-10 py-10 font-roboto 2xl:px-0 mx:pr-10 lg:items-start"
+    >
+      <span className="text-base text-center text-primary-dark max-w-fit sm:text-left">
         O Primeiro Evento Online de{" "}
         <span className="font-bold">Apostas no Brasil</span>
       </span>
-      <div className="max-w-fit uppercase text-4xl lg:text-5xl font-extrabold flex flex-col gap-2 lg:gap-4">
+      <div className="flex flex-col gap-2 text-4xl font-extrabold uppercase max-w-fit lg:text-5xl lg:gap-4">
         <h1 className="max-w-fit">Transforme</h1>
         <span className="max-w-fit">sua experiência</span>
         <span className="font-normal max-w-fit">no mercado de</span>
@@ -29,7 +35,7 @@ const HeroLeft = () => {
           <img src={betpass} alt="betpass" className="w-24 text-black" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

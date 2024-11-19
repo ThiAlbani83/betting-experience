@@ -8,11 +8,17 @@ import bruno from "../assets/bruno.png";
 import leonardo from "../assets/leonardo.png";
 import udo from "../assets/udo.png";
 import wagner from "../assets/wagner.png";
+import { motion } from "framer-motion";
 
 const Carroussel = () => {
   return (
-    <div>
-      <div className="flex relative">
+    <motion.div
+      initial={{ opacity: 0, x: -400 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.3 }}
+    >
+      <div className="relative flex">
         <h1 className="uppercase text-[#E6E6E6] font-poppins font-extrabold text-2xl md:text-4xl text-start px-10 md:px-20 mb-16 border-b border-b-[#E6E6E6] w-full">
           Saiba quem são
           <br /> nossos palestrantes
@@ -52,7 +58,7 @@ const Carroussel = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

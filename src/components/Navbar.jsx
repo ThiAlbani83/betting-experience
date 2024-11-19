@@ -3,6 +3,7 @@ import logo from "../assets/betting-experience-logo.png";
 import Button from "./Button";
 import { HiOutlineMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,33 +13,38 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full bg-background sticky top-0 shadow-lg z-50">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2 }}
+      className="sticky top-0 z-50 w-full shadow-lg bg-background"
+    >
       <div className="mx-auto md:px-20 px-10 xl:px-0 py-[26px] home flex items-center justify-between max-w-[1200px] ">
-        <a href="#home">
+        <Link to="#" smooth={true} duration={800}>
           <img
             src={logo}
             alt="betting-experience-logo"
             className="w-[170px] active:scale-95 duration-300"
           />
-        </a>
-        <div className="lg:flex items-center gap-20 hidden">
+        </Link>
+        <div className="items-center hidden gap-20 lg:flex">
           <menu>
-            <ul className="font-roboto text-base flex gap-20">
-              <a href="#home">
-                <li className="hover:text-primary-dark active:scale-95 duration-300">
+            <ul className="flex gap-20 text-base font-roboto">
+              <Link to="#" smooth={true} duration={800}>
+                <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Home
                 </li>
-              </a>
-              <a href="#sponsors">
-                <li className="hover:text-primary-dark active:scale-95 duration-300">
+              </Link>
+              <Link to="patrocine" smooth={true} duration={800}>
+                <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Seja Patrocinador
                 </li>
-              </a>
+              </Link>
             </ul>
           </menu>
           <Button text={"Garantir Ingresso"} />
         </div>
-        <div className="lg:hidden block">
+        <div className="block lg:hidden">
           <HiOutlineMenu
             onClick={handleClick}
             className={`${
@@ -53,23 +59,23 @@ const Navbar = () => {
             transition={{ duration: 0.75, stiffness: 100 }}
             className="absolute top-0 left-0 w-full h-screen bg-primary-light -z-10 scroll-hidden"
           >
-            <ul className="w-full h-screen items-center justify-center flex flex-col gap-10 font-roboto text-xl">
-              <a href="#home">
-                <li className="hover:text-primary-dark active:scale-95 duration-300">
+            <ul className="flex flex-col items-center justify-center w-full h-screen gap-10 text-xl font-roboto">
+              <Link to="#" smooth={true} duration={800}>
+                <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Home
                 </li>
-              </a>
-              <a href="#sponsors">
-                <li className="hover:text-primary-dark active:scale-95 duration-300">
+              </Link>
+              <Link to="#patrocine" smooth={true} duration={800}>
+                <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Seja Patrocinador
                 </li>
-              </a>
+              </Link>
               <Button text={"Garantir Ingresso"} />
             </ul>
           </motion.div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,19 +1,31 @@
 import pokerCoins from "../assets/poker-coins.svg";
 import ContentCard from "./ContentCard";
+import { motion } from "framer-motion";
 
 const WhyJoin = () => {
   return (
-    <div className="flex flex-col flex-1 max-w-[1560px] ml-auto relative px-10 2xl:px-0 py-24">
-      <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 3 }}
+      className="flex flex-col flex-1 max-w-[1560px] ml-auto relative px-10 2xl:px-0 py-24"
+    >
+      <motion.div
+        initial={{ opacity: 0, x: 300 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <img
           src={pokerCoins}
           alt="poker-coins"
           className="absolute top-8 lg:right-20 right-0 w- 2xl:w-[700px] 2xl:h-[720px] opacity-10 lg:opacity-60"
         />
-      </div>
-      <div className="uppercase font-roboto text-4xl lg:text-5xl font-extrabold flex flex-col gap-2 lg:gap-4 w-full">
+      </motion.div>
+      <div className="flex flex-col w-full gap-2 text-4xl font-extrabold uppercase font-roboto lg:text-5xl lg:gap-4">
         <h1 className="text-center md:text-start">Por Que</h1>
-        <h1 className="text-center md:text-start text-primary-dark font-normal">
+        <h1 className="font-normal text-center md:text-start text-primary-dark">
           participar?
         </h1>
       </div>
@@ -27,26 +39,47 @@ const WhyJoin = () => {
         </p>
       </div>
       <div className="max-w-[900px] mt-14 flex flex-col gap-6">
-        <ContentCard
-          title={"Atualização Regulamentar:"}
-          description={
-            "Entenda em profundidade as novas leis, as obrigações e os benefícios de operar legalmente no Brasil."
-          }
-        />
-        <ContentCard
-          title={"Oportunidades para Afiliados:"}
-          description={
-            " Descubra estratégias para monetizar suas operações e expandir sua presença no mercado regulado."
-          }
-        />
-        <ContentCard
-          title={"Posicionamento de Mercado:"}
-          description={
-            "Aprenda com cases de sucesso e explore estratégias de crescimento com as melhores práticas da Tropicalize."
-          }
-        />
+        <motion.div
+          initial={{ opacity: 0, x: -600 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <ContentCard
+            title={"Atualização Regulamentar:"}
+            description={
+              "Entenda em profundidade as novas leis, as obrigações e os benefícios de operar legalmente no Brasil."
+            }
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 600 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <ContentCard
+            title={"Oportunidades para Afiliados:"}
+            description={
+              " Descubra estratégias para monetizar suas operações e expandir sua presença no mercado regulado."
+            }
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -600 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <ContentCard
+            title={"Posicionamento de Mercado:"}
+            description={
+              "Aprenda com cases de sucesso e explore estratégias de crescimento com as melhores práticas da Tropicalize."
+            }
+          />
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,18 +4,24 @@ file_put_contents('log.txt', json_encode($_REQUEST), FILE_APPEND);
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+// Increase these values at the top of your file
+set_time_limit(60);
+ini_set('max_execution_time', 60);
 
 // CORS headers
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 $allowed_origins = [
   'http://localhost:5173/',
-  'https://tropicalize.com/privacy-policy',
-  'https://tropicalize.com/security-information-policy',
+  'http://localhost:3000/',
+  'http://localhost:8000/'
 ];
+
+if (in_array($origin, $allowed_origins)) {
+  header("Access-Control-Allow-Origin: $origin");
+}
 
 header("Access-Control-Allow-Origin: $origin");
 header("Access-Control-Allow-Credentials: true");
-
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
@@ -31,26 +37,32 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php'; // Autoload PHPMailer
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    file_put_contents('debug.log', "Received POST request: " . file_get_contents("php://input") . "\n", FILE_APPEND);
     $data = json_decode(file_get_contents("php://input"), true);
     $mail = new PHPMailer(true);
 
     try {
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com'; // Change to your SMTP server (like Gmail)
+        $mail->Host       = 'smtp.hostinger.com'; // Change to your SMTP server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'tropicalize.br@gmail.com'; // Your Gmail address
-        $mail->Password   = 'wkrd mfzl vdky mlim'; // App-specific password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Username   = 'contato@bettingexperience.com.br'; // Your email address
+        $mail->Password   = 'I0kM|:;T~r6'; // App-specific password
+        $mail->Port       = 465;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->SMTPDebug = 3; // Increase debug level
+        $mail->Debugoutput = function($str, $level) {
+            error_log("PHPMailer Debug: $str");
+        };
 
         // Charset configuration
         $mail->CharSet = 'UTF-8';
         $mail->Encoding = 'base64';
 
         // Email settings
-        $mail->setFrom($data['email'], $data['name']);
-        $mail->addAddress('tropicalize.br@gmail.com');
+        $mail->setFrom('contato@bettingexperience.com.br', $data['name']);
+        $mail->addReplyTo($data['email'], $data['name']);
+        $mail->addAddress('contato@bettingexperience.com.br');
 
         $mail->isHTML(true);
 
@@ -61,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // enviar e-mail de confirmação para o cliente
         $mail->clearAddresses();
-        $mail->setFrom('tropicalize.br@gmail.com', 'Equipe Tropicalize.co');
+        $mail->setFrom('contato@bettingexperience.com.br', 'Equipe Betting Experience');
         $mail->addAddress($data['email']);
 
         $mail->Subject = 'Inscrição Confirmada';
@@ -74,3 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(['status' => 'error', 'message' => "Failed to send email: {$mail->ErrorInfo}"]);
     }
 }
+
+// Add these right after the <?php
+error_log("Request received at: " . date('Y-m-d H:i:s'));
+error_log("Request data: " . file_get_contents("php://input"));

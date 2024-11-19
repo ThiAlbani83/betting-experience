@@ -12,3 +12,21 @@
   .swiper-slide {
     transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
   }
+
+  /* Personalizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px; /* largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* cor do trilho da scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(31, 1, 185, 1); /* cor da thumb (parte que você arrasta) */
+  border-radius: 0px; /* bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #606d8b; /* cor da thumb ao passar o mouse */
+}

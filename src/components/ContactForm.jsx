@@ -1,9 +1,15 @@
-import SwitchToggle from "./SwitchToggle";
 import Button from "./Button";
 import { cargo, segmento } from "../data/data";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import axios from "axios";
 
 const ContactForm = () => {
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
+  const [errorMessage, setErrorMessage] = useState(""); // Error message state
+  const [success, setSuccess] = useState(false); // Success message state
+  const [loading, setLoading] = useState(false); // Loading state
+  const [error, setError] = useState(false); // Error message state/ Error message state
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,27 +30,35 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await axios.post(
-        "https://tropicalize.com/sendEmail.php",
-        data,
-        {
+      console.log("antes do response")
+      console.log("Sending data:", data) // Log the data being sent
+      
+    const response = await axios.post(
+      "http://localhost:8000/mailer.php",
+      data,
+      {
           headers: {
-            "Content-Type": "application/json",
+              "Content-Type": "application/json",
           },
-        }
-      );
+          withCredentials: true,
+          timeout: 30000 // Increased to 30 seconds
+      }
+    );
+      
+      console.log("depois do response")
       setSuccessMessage("Mensagem enviada com sucesso!");
       setSuccess(true);
+      console.log(response.data);
       setErrorMessage("");
-      console.log(data);
       setError(false);
     } catch (error) {
-      setErrorMessage(
-        error.message || "Erro ao enviar a mensagem. Tente novamente."
-      );
-      setSuccessMessage("");
-      setError(true);
-      setSuccess(false);
+      console.log("Detailed error info:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        headers: error.response?.headers
+      });
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -59,8 +73,12 @@ const ContactForm = () => {
   };
 
   return (
-    <form
+    <motion.form
+      initial={{ x: 750 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 1 }}
       onSubmit={handleSubmit}
+      id="contact"
       className="max-w-[350px] sm:ml-10 pt-9 w-full px-7 pb-11 bg-[#131313] place-content-center place-self-center lg:place-self-start flex flex-col gap-4 rounded-md shadow-xl"
     >
       <div className="flex flex-col gap-2">
@@ -147,7 +165,7 @@ const ContactForm = () => {
         </select>
       </div>
       <Button children={"mt-2"} text="Enviar" />
-    </form>
+    </motion.form>
   );
 };
 

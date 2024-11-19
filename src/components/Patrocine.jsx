@@ -2,10 +2,19 @@ import React from "react";
 import TierCardSection from "./TierCardSection";
 import PrizesSection from "./PrizesSection";
 import Button from "./Button";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Patrocine = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <motion.div
+      id="patrocine"
+      initial={{ opacity: 0, x: 400 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col gap-20"
+    >
       <div className="flex flex-col gap-10 px-10">
         <h1 className="uppercase text-[#E6E6E6] font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl text-center">
           Patrocine o betting experience
@@ -27,8 +36,10 @@ const Patrocine = () => {
       <p className=" -mt-14 text-[#1F01B9] font-roboto font-light text-[22px] leading-[35px] text-center max-w-[940px] mx-auto">
         Inscreva-se agora para garantir seu lugar no Betting Experience!
       </p>
-      <Button children={"w-fit px-20 sm:px-32 place-self-center"} text={"Inscreva-se"} />
-    </div>
+      <Link to="#" smooth={true} duration={800} className="place-self-center">
+        <Button children={"w-fit px-20 sm:px-32"} text={"Inscreva-se"} />
+      </Link>
+    </motion.div>
   );
 };
 
