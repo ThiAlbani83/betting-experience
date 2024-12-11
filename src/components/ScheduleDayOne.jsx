@@ -83,8 +83,12 @@ const ScheduleDayOne = () => {
         <ScheduleAccordion
           hour={"19:50"}
           title={"Apostas Reguladas: Transparência e direitos do consumidor"}
-          guest={" Leonardo Baptista - CEO da Pay4fun"}
-          participants={["Felipe Paniago - Co-fundador e CMO do Reclame Aqui"]}
+          guest={"Natália Nogues-  CEO da Control F5"}
+          participants={[
+            "Leonardo Baptista- CEO da Pay4fun",
+            "Felipe Paniago - Co-fundador e CMO do Reclame Aqui",
+            "Senador Irajá (PSD-TO), relator da legalização dos cassinos e jogo do bicho",
+          ]}
           description={
             "A transparência nas apostas regulamentadas é essencial para garantir que os consumidores possam fazer escolhas conscientes. O governo pode exigir que as empresas de apostas divulguem informações claras sobre como os jogos funcionam, as probabilidades oferecidas, as políticas de pagamento e os critérios para bonificações e promoções. Isso não apenas facilita a confiança do consumidor, mas também permite que ele compreenda os riscos envolvidos em cada aposta e tome decisões com mais responsabilidade. Neste painel vamos abordar alguns direitos do consumidor e o que ele precisa ficar de olho na hora de apostas e consumir conteúdos do setor."
           }

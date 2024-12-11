@@ -64,7 +64,7 @@ const ScheduleDayTwo = () => {
         <ScheduleAccordion
           hour={"19:30"}
           title={"The Tips com o Matheus Caumo"}
-          guest={" Matheus Caumo: Influencer e Tipster”)"}
+          guest={"Matheus Caumo: Influencer e Tipster"}
         />
       </div>
       <div>
