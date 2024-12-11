@@ -9,10 +9,10 @@ const Patrocine = () => {
   return (
     <motion.div
       id="patrocine"
-      initial={{ opacity: 0, x: 400 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 1.2 }}
       className="flex flex-col gap-20"
     >
       <div className="flex flex-col gap-10 px-10">
@@ -34,11 +34,13 @@ const Patrocine = () => {
         Não perca essa oportunidade de elevar sua atuação no mercado de apostas.
       </h1>
       <p className=" -mt-14 text-[#1F01B9] font-roboto font-light text-[22px] leading-[35px] text-center max-w-[940px] mx-auto">
-        Inscreva-se agora para garantir seu lugar no Betting Experience!
+        Entre em contato para garantir seu lugar no Betting Experience!
       </p>
-      <Link to="#" smooth={true} duration={800} className="place-self-center">
-        <Button children={"w-fit px-20 sm:px-32"} text={"Inscreva-se"} />
-      </Link>
+      <div className="flex items-center justify-center w-full">
+        <p className="p-2 text-sm font-semibold border rounded-md sm:text-xl border-primary-medium text-primary-dark font-poppins animate-pulse">
+          mateus.nunes@tropicalize.com
+        </p>
+      </div>
     </motion.div>
   );
 };

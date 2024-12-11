@@ -4,52 +4,86 @@ import Button from "./Button";
 import { HiOutlineMenu } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-
+import { Link as LinkRedirect, useLocation } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const isTermsRoute = location.pathname === "/terms-and-conditions";
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+    if (!isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1.2 }}
-      className="sticky top-0 z-50 w-full shadow-lg bg-background"
-    >
+  const handleMenuClick = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "unset";
+  };
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+        className="z-[60] w-full shadow-lg bg-background relative"
+      >
       <div className="mx-auto md:px-20 px-10 xl:px-0 py-[26px] home flex items-center justify-between max-w-[1200px] ">
-        <Link to="#" smooth={true} duration={800}>
+        <LinkRedirect to="/" className="relative z-50 cursor-pointer">
           <img
             src={logo}
             alt="betting-experience-logo"
             className="w-[170px] active:scale-95 duration-300"
           />
-        </Link>
+        </LinkRedirect>
         <div className="items-center hidden gap-20 lg:flex">
           <menu>
             <ul className="flex gap-20 text-base font-roboto">
-              <Link to="#" smooth={true} duration={800}>
+              <LinkRedirect to="/" className="cursor-pointer">
                 <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Home
                 </li>
-              </Link>
-              <Link to="patrocine" smooth={true} duration={800}>
+              </LinkRedirect>
+              <Link
+                to="patrocine"
+                smooth={true}
+                duration={800}
+                className={`cursor-pointer ${
+                  isTermsRoute ? "hidden" : "block"
+                }`}
+              >
                 <li className="duration-300 hover:text-primary-dark active:scale-95">
                   Seja Patrocinador
                 </li>
               </Link>
+              <Link
+                to="agenda"
+                smooth={true}
+                duration={800}
+                className={`cursor-pointer ${
+                  isTermsRoute ? "hidden" : "block"
+                }`}
+              >
+                <li className="duration-300 hover:text-primary-dark active:scale-95">
+                  Agenda
+                </li>
+              </Link>
             </ul>
           </menu>
-          <Button text={"Garantir Ingresso"} />
+          {isTermsRoute && (
+            <LinkRedirect to={"/"}>
+              <Button text={"Garantir Ingresso"} />
+            </LinkRedirect>
+          )}
         </div>
-        <div className="block lg:hidden">
+        <div className="lg:hidden">
           <HiOutlineMenu
             onClick={handleClick}
             className={`${
               isOpen ? "text-black" : "text-primary-medium"
-            } text-4xl z-50  active:scale-95 duration-300 cursor-pointer`}
+            } text-4xl active:scale-95 z-50 duration-300 cursor-pointer`}
           />
         </div>
         {isOpen && (
@@ -57,20 +91,71 @@ const Navbar = () => {
             initial={{ opacity: 0, x: window.innerWidth < 1024 ? 0 : 400 }}
             animate={{ opacity: 1, x: 0, y: 0 }}
             transition={{ duration: 0.75, stiffness: 100 }}
-            className="absolute top-0 left-0 w-full h-screen bg-primary-light -z-10 scroll-hidden"
+            className="absolute top-0 left-0 -z-[5] w-full h-screen bg-primary-light scroll-hidden"
           >
             <ul className="flex flex-col items-center justify-center w-full h-screen gap-10 text-xl font-roboto">
-              <Link to="#" smooth={true} duration={800}>
-                <li className="duration-300 hover:text-primary-dark active:scale-95">
+              <LinkRedirect onClick={handleMenuClick} to="/">
+                <li className="text-white duration-300 hover:text-primary-dark active:scale-95">
                   Home
                 </li>
-              </Link>
-              <Link to="#patrocine" smooth={true} duration={800}>
-                <li className="duration-300 hover:text-primary-dark active:scale-95">
+              </LinkRedirect>
+              <LinkRedirect
+                onClick={() => {
+                  handleMenuClick();
+                  setTimeout(() => {
+                    const element = document.getElementById("patrocine");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                      duration: 800,
+                    });
+                  }, 100);
+                }}
+                to="/"
+                className={`${
+                  isTermsRoute ? "hidden" : "block"
+                } cursor-pointer`}
+              >
+                <li className="text-white duration-300 hover:text-primary-dark active:scale-95">
                   Seja Patrocinador
                 </li>
-              </Link>
-              <Button text={"Garantir Ingresso"} />
+              </LinkRedirect>
+              <LinkRedirect
+                onClick={() => {
+                  handleMenuClick();
+                  setTimeout(() => {
+                    const element = document.getElementById("agenda");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                      duration: 800,
+                    });
+                  }, 100);
+                }}
+                to="/"
+                className={`${
+                  isTermsRoute ? "hidden" : "block"
+                } cursor-pointer`}
+              >
+                <li className="text-white duration-300 hover:text-primary-dark active:scale-95">
+                  Agenda
+                </li>
+              </LinkRedirect>
+              {isTermsRoute && (
+                <LinkRedirect
+                  onClick={() => {
+                    handleMenuClick();
+                    setTimeout(() => {
+                      const element = document.getElementById("contact");
+                      element?.scrollIntoView({
+                        behavior: "smooth",
+                        duration: 800,
+                      });
+                    }, 100);
+                  }}
+                  to={"/"}
+                >
+                  <Button text={"Garantir Ingresso"} />
+                </LinkRedirect>
+              )}
             </ul>
           </motion.div>
         )}

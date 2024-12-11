@@ -23,7 +23,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(31, 1, 185, 1); /* cor da thumb (parte que você arrasta) */
+  background-color: rgb(70, 70, 70); /* cor da thumb (parte que você arrasta) */
   border-radius: 0px; /* bordas arredondadas */
 }
 

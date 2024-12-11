@@ -39,45 +39,30 @@ const WhyJoin = () => {
         </p>
       </div>
       <div className="max-w-[900px] mt-14 flex flex-col gap-6">
-        <motion.div
-          initial={{ opacity: 0, x: -600 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div>
           <ContentCard
             title={"Atualização Regulamentar:"}
             description={
               "Entenda em profundidade as novas leis, as obrigações e os benefícios de operar legalmente no Brasil."
             }
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 600 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        </div>
+        <div>
           <ContentCard
             title={"Oportunidades para Afiliados:"}
             description={
               " Descubra estratégias para monetizar suas operações e expandir sua presença no mercado regulado."
             }
           />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -600 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        </div>
+        <div>
           <ContentCard
             title={"Posicionamento de Mercado:"}
             description={
               "Aprenda com cases de sucesso e explore estratégias de crescimento com as melhores práticas da Tropicalize."
             }
           />
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );

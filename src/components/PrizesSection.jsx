@@ -29,12 +29,12 @@ const PrizesSection = () => {
       <img
         src={copas}
         alt="copas"
-        className="absolute top-[140px] left-[180px] max-w-[215px] w-full opacity-30 -z-10"
+        className="absolute top-[140px] left-[180px] max-w-[215px] w-full opacity-30 -z-10 hidden sm:block"
       />
       <img
         src={star}
         alt="star"
-        className="absolute -top-[700px] left-[110px] max-w-[115px] w-full opacity-30 -z-10"
+        className="absolute -top-[700px] left-[110px] max-w-[115px] w-full opacity-30 -z-10 hidden sm:block"
       />
     </div>
   );
