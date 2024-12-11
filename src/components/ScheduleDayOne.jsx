@@ -83,7 +83,7 @@ const ScheduleDayOne = () => {
         <ScheduleAccordion
           hour={"19:50"}
           title={"Apostas Reguladas: Transparência e direitos do consumidor"}
-          guest={"Natália Nogues-  CEO da Control F5"}
+          guest={"Natália Nogues -  CEO da Control F5"}
           participants={[
             "Leonardo Baptista- CEO da Pay4fun",
             "Felipe Paniago - Co-fundador e CMO do Reclame Aqui",
