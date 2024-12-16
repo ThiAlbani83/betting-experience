@@ -72,6 +72,15 @@ export const palestrantes = [
       "https://www.linkedin.com/in/sergio-sacchi-4845017/?originalSubdomain=br  ",
   },
   {
+    nome: "Luiz Felipe Maia",
+    cargo: "Sócio Fundador - MYLAW",
+    imagem: images.maia,
+    description: `Luiz Felipe Maia, é sócio fundador da MYLAW Advogados, mestre em direito pela Universidade Federal de Pernambuco, General Member do International Masters of Gaming Law, autor do capítulo brasileiro do The Gambling Law Review, do Chambers and Partners Gaming Law Practice Guide para o Brasil, e Revisor da GamblingCompliance no Brasil.\n
+    Maia é palestrante frequente em eventos internacionais de jogos e foi também classificado entre os melhores advogados de esportes no Brasil tanto pelo Chambers and Partners Brazil quanto Global de 2021 a 2024 e como  um dos melhores advogado de Gaming do mundo pelo Who’s Who Legal de 2021 a 2024.\n 
+    Maia foi premiado com o ICE Landmark Award em 2022 como reconhecimento como o Melhor Advogado de Jogos no Brasil.`,
+    linkedin: "https://www.linkedin.com/in/luizfelipemaia/",
+  },
+  {
     nome: "Igor",
     cargo: "Influencer",
     imagem: images.igor,
@@ -282,7 +291,7 @@ export const palestrantes = [
   },
   {
     nome: "Andresa Franco",
-    cargo: "Chief of Growth Officer",
+    cargo: "Chief Growth Officer",
     imagem: images.andressa,
     description: `- Especialista em branding e negócios digitais pela USP, atua como Chief of Growth Officer na Weebet.\n
     - Lidera projetos estratégicos no setor de iGaming e apostas esportivas, impulsionando resultados no mercado de tecnologia e entretenimento.`,
@@ -348,15 +357,6 @@ export const palestrantes = [
     imagem: images.guilherme,
     description: `Guilherme Buso é jornalista, pós-graduado em marketing e mestre em gestão do esporte pela Coventry University (Inglaterra). Por mais de uma década, liderou a equipe de comunicação do NBB, onde também coordenou o Jogo das Estrelas, reconhecido como o maior evento de esporte e entretenimento do país. Ele ainda teve passagens pela Federação Paulista de Futebol e Puma Brasil, e hoje, é VP da Genius Sports aqui no Brasil, empresa global de tecnologia no esporte.`,
     linkedin: "https://www.linkedin.com/in/guilhermebuso/",
-  },
-  {
-    nome: "Luiz Felipe Maia",
-    cargo: "Sócio Fundador - MYLAW",
-    imagem: images.maia,
-    description: `Luiz Felipe Maia, é sócio fundador da MYLAW Advogados, mestre em direito pela Universidade Federal de Pernambuco, General Member do International Masters of Gaming Law, autor do capítulo brasileiro do The Gambling Law Review, do Chambers and Partners Gaming Law Practice Guide para o Brasil, e Revisor da GamblingCompliance no Brasil.\n
-    Maia é palestrante frequente em eventos internacionais de jogos e foi também classificado entre os melhores advogados de esportes no Brasil tanto pelo Chambers and Partners Brazil quanto Global de 2021 a 2024 e como  um dos melhores advogado de Gaming do mundo pelo Who’s Who Legal de 2021 a 2024.\n 
-    Maia foi premiado com o ICE Landmark Award em 2022 como reconhecimento como o Melhor Advogado de Jogos no Brasil.`,
-    linkedin: "https://www.linkedin.com/in/luizfelipemaia/",
   },
 ];
 
