@@ -32,8 +32,18 @@ import thiago from "../assets/thiago.png";
 import kannebley from "../assets/kannebley.png";
 import guilherme from "../assets/guilherme.png";
 import maia from "../assets/maia.png";
+import alex from "../assets/alex.png";
+import gabriella from "../assets/gabriella.png";
+import ricardo from "../assets/ricardo.png";
+import antonio from "../assets/antonio.png";
+import natalia from "../assets/natalia.png";
 
 const images = {
+  alex,
+  gabriella,
+  ricardo,
+  antonio,
+  natalia,
   victoria,
   bruno,
   leonardo,

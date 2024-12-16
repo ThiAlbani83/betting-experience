@@ -32,17 +32,19 @@ export default function Modal({
     >
       <div
         className={`bg-gray-200 bg-center bg-cover bg-no-repeat py-10 sm:py-40 px-4 rounded-xl max-w-[80%] sm:max-w-[75%] lg:max-w-[65%] 2xl:max-w-[30%] flex flex-col gap-5 sm:gap-10 relative ${
-          (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+          name === "Victoria Ceroni" ||
+          name === "Fernanda Batistella" ||
+          name === "Mariana Chamelette" ||
+          name === "Débora Cunha R." ||
+          name === "Simone Vicentini" ||
+          name === "Daniele Costa" ||
+          name === "Jacqueline Favraud" ||
+          name === "Flávia Feher Merlo" ||
+          name === "Andresa Franco" ||
+          name === "Lara Nicolau" ||
+          name === "Mariana Kannebley" ||
+          name === "Natalia Nogues" ||
+          name === "Gabriella Moleda"
             ? "shadow-[8px_8px_0px_0px_rgb(190,24,93,0.9)]"
             : "shadow-[8px_8px_0px_0px_rgba(31,1,185,1)]"
         } max-h-[90vh] overflow-y-scroll modal`}
@@ -50,17 +52,19 @@ export default function Modal({
       >
         <h1
           className={`text-4xl w-fit place-self-center font-bold text-center ${
-            (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+            name === "Victoria Ceroni" ||
+            name === "Fernanda Batistella" ||
+            name === "Mariana Chamelette" ||
+            name === "Débora Cunha R." ||
+            name === "Simone Vicentini" ||
+            name === "Daniele Costa" ||
+            name === "Jacqueline Favraud" ||
+            name === "Flávia Feher Merlo" ||
+            name === "Andresa Franco" ||
+            name === "Lara Nicolau" ||
+            name === "Mariana Kannebley" ||
+            name === "Natalia Nogues" ||
+            name === "Gabriella Moleda"
               ? "text-pink-700 drop-shadow-[3px_3px_2px_rgba(190,24,93,0.5)]"
               : "text-primary-dark drop-shadow-[3px_3px_2px_rgba(31,1,185,0.5)]"
           } font-inter`}
@@ -69,17 +73,19 @@ export default function Modal({
         </h1>
         <h3
           className={`text-xl font-semibold text-center ${
-            (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+            name === "Victoria Ceroni" ||
+            name === "Fernanda Batistella" ||
+            name === "Mariana Chamelette" ||
+            name === "Débora Cunha R." ||
+            name === "Simone Vicentini" ||
+            name === "Daniele Costa" ||
+            name === "Jacqueline Favraud" ||
+            name === "Flávia Feher Merlo" ||
+            name === "Andresa Franco" ||
+            name === "Lara Nicolau" ||
+            name === "Mariana Kannebley" ||
+            name === "Natalia Nogues" ||
+            name === "Gabriella Moleda"
               ? "text-pink-700 drop-shadow-[1px_1px_1px_rgba(190,24,93,0.5)]"
               : "text-primary-dark drop-shadow-[1px_1px_1px_rgba(31,1,185,0.5)]"
           } font-inter`}
@@ -94,17 +100,19 @@ export default function Modal({
             <a href={linkedin} target="_blank" className="flex justify-center ">
               <FaLinkedin
                 className={`self-center text-4xl ${
-                  (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+                  name === "Victoria Ceroni" ||
+                  name === "Fernanda Batistella" ||
+                  name === "Mariana Chamelette" ||
+                  name === "Débora Cunha R." ||
+                  name === "Simone Vicentini" ||
+                  name === "Daniele Costa" ||
+                  name === "Jacqueline Favraud" ||
+                  name === "Flávia Feher Merlo" ||
+                  name === "Andresa Franco" ||
+                  name === "Lara Nicolau" ||
+                  name === "Mariana Kannebley" ||
+                  name === "Natalia Nogues" ||
+                  name === "Gabriella Moleda"
                     ? "text-pink-700"
                     : "text-primary-dark"
                 }`}
@@ -112,20 +120,26 @@ export default function Modal({
             </a>
           )}
           {instagram && (
-            <a href={instagram} target="_blank" className="flex justify-center ">
+            <a
+              href={instagram}
+              target="_blank"
+              className="flex justify-center "
+            >
               <FaInstagram
                 className={`self-center text-4xl ${
-                  (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+                  name === "Victoria Ceroni" ||
+                  name === "Fernanda Batistella" ||
+                  name === "Mariana Chamelette" ||
+                  name === "Débora Cunha R." ||
+                  name === "Simone Vicentini" ||
+                  name === "Daniele Costa" ||
+                  name === "Jacqueline Favraud" ||
+                  name === "Flávia Feher Merlo" ||
+                  name === "Andresa Franco" ||
+                  name === "Lara Nicolau" ||
+                  name === "Mariana Kannebley" ||
+                  name === "Natalia Nogues" ||
+                  name === "Gabriella Moleda"
                     ? "text-pink-700"
                     : "text-primary-dark"
                 }`}
@@ -136,17 +150,19 @@ export default function Modal({
             <a href={youtube} target="_blank" className="flex justify-center ">
               <FaYoutube
                 className={`self-center text-4xl ${
-                  (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+                  name === "Victoria Ceroni" ||
+                  name === "Fernanda Batistella" ||
+                  name === "Mariana Chamelette" ||
+                  name === "Débora Cunha R." ||
+                  name === "Simone Vicentini" ||
+                  name === "Daniele Costa" ||
+                  name === "Jacqueline Favraud" ||
+                  name === "Flávia Feher Merlo" ||
+                  name === "Andresa Franco" ||
+                  name === "Lara Nicolau" ||
+                  name === "Mariana Kannebley" ||
+                  name === "Natalia Nogues" ||
+                  name === "Gabriella Moleda"
                     ? "text-pink-700"
                     : "text-primary-dark"
                 }`}
@@ -158,17 +174,19 @@ export default function Modal({
         <FaWindowClose
           onClick={onClose}
           className={`absolute rounded-lg cursor-pointer size-8 top-4 right-4 ${
-            (name === "Victoria Ceroni") ||
-          (name === "Fernanda Batistella") ||
-          (name === "Mariana Chamelette") ||
-          (name === "Débora Cunha R.") ||
-          (name === "Simone Vicentini") ||
-          (name === "Daniele Costa") ||
-          (name === "Jacqueline Favraud")||
-          (name === "Flávia Feher Merlo") ||
-          (name === "Andresa Franco") ||
-          (name === "Lara Nicolau")||
-          (name === "Mariana Kannebley")
+            name === "Victoria Ceroni" ||
+            name === "Fernanda Batistella" ||
+            name === "Mariana Chamelette" ||
+            name === "Débora Cunha R." ||
+            name === "Simone Vicentini" ||
+            name === "Daniele Costa" ||
+            name === "Jacqueline Favraud" ||
+            name === "Flávia Feher Merlo" ||
+            name === "Andresa Franco" ||
+            name === "Lara Nicolau" ||
+            name === "Mariana Kannebley" ||
+            name === "Natalia Nogues" ||
+            name === "Gabriella Moleda"
               ? "text-pink-700"
               : "text-primary-dark"
           }`}

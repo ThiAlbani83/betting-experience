@@ -1,3 +1,4 @@
+import { link } from "framer-motion/client";
 import images from "./images";
 
 export const cargo = [
@@ -357,6 +358,48 @@ export const palestrantes = [
     imagem: images.guilherme,
     description: `Guilherme Buso é jornalista, pós-graduado em marketing e mestre em gestão do esporte pela Coventry University (Inglaterra). Por mais de uma década, liderou a equipe de comunicação do NBB, onde também coordenou o Jogo das Estrelas, reconhecido como o maior evento de esporte e entretenimento do país. Ele ainda teve passagens pela Federação Paulista de Futebol e Puma Brasil, e hoje, é VP da Genius Sports aqui no Brasil, empresa global de tecnologia no esporte.`,
     linkedin: "https://www.linkedin.com/in/guilhermebuso/",
+  },
+  {
+    nome: "Natalia Nogues",
+    cargo: "CEO da Control F5",
+    imagem: images.natalia,
+    description: `Formada em Design pela ORT Uruguai e com MBA em Gestão de Negócios pela FGV, acumula 15 anos de experiência em Online Gaming na LATAM, com foco no Brasil. Hoje CEO da Control F5, um hub de serviços para empresas focadas na indústria de jogos no Brasil e uma das fundadoras da AMIG – Associação de Mulheres da Indústria do Gaming.`,
+  },
+  {
+    nome: "Antonio Carlos Ferreira",
+    cargo: "Representante CEF",
+    imagem: images.antonio,
+    description: `- Brasiliense, 57 anos, ex vp de governança e estratégia da caixa.\n
+    - Bacharel em Ciências Econômicas, Pós-Graduado em Gestão Financeira, Controladoria e Auditoria pela Fundação Getúlio Vargas – FGV  e Curso Superior em Política e Estratégia pela Escola Superior de Guerra – ESG.\n 
+    - Exerceu o cargo Vice-Presidente de Logística e Operações, além de outros cargos na CAIXA, tais como, Vice-Presidente de Estratégia e Pessoas e Diretor Executivo de Governança, Integridade e Pessoas.\n
+    - Dentre outros, foi conselheiro do Conselho Deliberativo da Fundação dos Economiários – FUNCEF, do Conselho Consultivo do Sistema Brasileiro de Inteligência - CONSISBIN, do Conselho Nacional de Políticas sobre Drogas – CONAD.\n
+    - No Conselho de Controle de Atividades Financeiras - COAF/MF tive a oportunidade de atuar como Presidente e anteriormente, como  Diretor de Inteligência e Supervisão. Atividades me honraram com alguns reconhecimentos corporativos e pessoais, pela atuação nessas tão importantes missões , especialmente na prevenção à lavagem de dinheiro e financiamento do terrorismo.`,
+    linkedin:
+      "https://www.linkedin.com/in/antonio-carlos-ferreira-732b42203/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+  {
+    nome: "Alex W Pariente",
+    cargo: "VP Hard Rock International",
+    imagem: images.alex,
+    description: `Vice-Presidente Sênior de Cassinos e Hotéis, Hard Rock International
+    Com uma carreira que abrange cargos de liderança na Wynn Resorts, Caesars International, Baha Mar e atualmente na Hard Rock International, trago mais de duas décadas de experiência na transformação do futuro de resorts integrados e operações de jogos. Minha paixão está em criar destinos de classe mundial que combinam, de forma harmoniosa, experiências excepcionais para os hóspedes com crescimento sustentável a longo prazo.\n
+    Especializo-me em todo o ciclo de vida do desenvolvimento de resorts integrados – desde a análise de mercado e planejamento estratégico até o design das propriedades, conformidade regulatória e execução operacional. Um aspecto fundamental do meu trabalho inclui a colaboração com governos e órgãos reguladores para desenvolver e aprimorar regulamentações de jogos, garantindo uma entrada de mercado tranquila e lançamentos operacionais bem-sucedidos.\n
+    Ao longo da minha trajetória, liderei projetos transformadores, potencializei portfólios de múltiplas propriedades e impulsionei a inovação em mercados altamente competitivos. Reconhecido por minha habilidade em construir equipes de alta performance e fomentar parcerias estratégicas, sou comprometido em entregar excelência em todos os níveis.\n
+    Com uma compreensão aprofundada das tendências globais de mercado, eficiências operacionais e estruturas regulatórias, possuo um histórico comprovado de elevar marcas a posições de liderança no setor.\n
+    Vamos nos conectar para explorar oportunidades em desenvolvimento de resorts integrados, inovação em jogos e liderança em hospitalidade.`,
+  },
+  {
+    nome: "Ricardo Magri",
+    cargo: "VP Hard Rock International",
+    imagem: images.ricardo,
+    description: `Embaixador do setor de apostas online (iGaming) desde os seus primórdios na América Latina, Ricardo já participou do lançamento e do crescimento de várias das marcas que atuam nesse setor, tanto as locais como as globais, não só no Brasil, mas em todos os outros mercados relevantes da Am. Latina. Atuou também junto aos outros participantes do ecossistema, como Entidades Esportivas (Clubes e Federações) e Órgãos Governamentais (Secretarias e Ministérios), contribuindo quando e como solicitado para ajudar a desenvolver e fomentar o setor. Em sua prática de consultoria, está engajado em projetos do setor voltados aos meios de pagamento, marketing de performance, conteúdo (dados e streaming), integridade das operações, jogo responsável (prevenção) e assuntos regulatórios.\n 
+    É co-fundador da EBAC (Empresa Brasileira de Apoio ao Compulsivo) e do Brazilian Lounge, dois empreendimentos voltados para a congregação da indústria nesse momento de regulamentação.`,
+  },
+  {
+    nome: "Gabriella Moleda",
+    cargo: "Executiva de CS",
+    imagem: images.gabriella,
+    description: `Profissional com ampla experiência em Customer Success, ocupando o cargo de Head Executiva de CS no Reclame AQUI. Reconhecida por sua liderança estratégica, Gabriella é responsável por impulsionar a satisfação do cliente e a expansão de receitas através de soluções inovadoras e gestão orientada a resultados.`,
   },
 ];
 
